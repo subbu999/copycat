@@ -1,1 +1,82 @@
-<p>contact works!</p>
+<section id="contact-form">
+    <div class="container">
+        <div class=" row">
+            <div class="col-sm-12 text-center">
+                <div class="headings">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <p>Let us know your opinion on our site. We may not perfect but "we can be"... with your
+                    feedback.
+                </p>
+                <form id="myForm" #contactForm="ngForm" (ngSubmit)="onFormSubmit(contactForm)">
+                    <div class="form-group">
+                        <input #name="ngModel" ngModel type="text" class="form-control" placeholder="Your Name"
+                            name="name" id="name" required>
+                        <div *ngIf="name.touched&&name.invalid" class="text-danger">
+                            <small *ngIf="name.errors.required">Name is required!</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input #email="ngModel" ngModel type="email" class="form-control" placeholder="Email Address"
+                            name="email" id="email" required email>
+                        <div *ngIf="email.touched&&email.invalid" class="text-danger">
+                            <small *ngIf="email.errors.required">Email is required!</small>
+                            <small *ngIf="email.errors.email">Enter a valid email id</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea #message="ngModel" ngModel class="form-control" rows="10" placeholder="Message"
+                            name="message" id="message" required minlength="4"></textarea>
+                        <div *ngIf="message.touched&&message.invalid" class="text-danger">
+                            <small *ngIf="message.errors.required">Write Something</small>
+                            <small *ngIf="message.errors.minlength">Too Short!!</small>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="submit-btn"
+                        [disabled]="contactForm.invalid">SEND</button>
+                </form>
+            </div>
+            <!-- spinner -->
+            <div class="modal" [(style.display)]="spinModalDisplay" tabindex="-1" role="dialog" id="spinModal">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="text-center m-5">
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <p>Sending</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for thank you -->
+            <div class="modal" [(style.display)]="thankModalDisplay" tabindex="-1" role="dialog" id="myModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content text-dark">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Thank You!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" onclick="$('#myModal').hide()">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>We will reply to you as soon as possible.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                (click)="reload()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal end -->
+        </div>
+    </div>
+</section>

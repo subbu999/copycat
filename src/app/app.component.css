@@ -12,7 +12,7 @@
     -moz-transition:all .5s ease-in-out ;
     -ms-transition:all .5s ease-in-out ;
     -o-transition:all .5s ease-in-out ;
-    
+    box-shadow: 0px 6px 6px hsl(206.5, 0%, 75%);
 }
 .navbar-brand img{
     height:40px;
