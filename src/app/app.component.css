@@ -1,0 +1,98 @@
+
+.container{    
+    padding:30px 15px;
+    margin: 116px auto 40px;
+    background-color: #fefefe;
+}
+/* navbar styles start */
+.navbar{
+    background-color: #fff;
+    transition:all .5s ease-in-out ;
+    -webkit-transition:all .5s ease-in-out ;
+    -moz-transition:all .5s ease-in-out ;
+    -ms-transition:all .5s ease-in-out ;
+    -o-transition:all .5s ease-in-out ;
+    
+}
+.navbar-brand img{
+    height:40px;
+    width:150px;
+}
+.navbar-nav{
+    padding-right: 20px;
+}
+.nav-link{
+    color: rgb(77, 77, 77);
+    font-size: 19px;
+    margin-left: 20px;
+}
+.active{
+    color:rgb(143, 218, 57)!important;
+}
+.changeNavBgc{
+    background-color: rgba(0, 0, 0);
+}
+.changeNavBgc .navbar-toggler{
+        background-color: #fff;
+}
+.changeNavBgc .navbar-toggler-icon{
+    width:25px;
+    height:20px;
+}
+.changeNavBgc .nav-link{
+    color:#dddddd;
+}
+/* navbar styles end */
+
+/* footer styles */
+footer{
+    background-color: #333;    
+}
+footer .container-fluid{
+    padding: 20px 20px;
+}
+footer p{
+    margin: 0;
+    color: #ccc;
+}
+.social-icons a{
+    margin-left: 20px;    
+}
+.social-icons i{
+    color:#ccc;
+    transition: color .5s ease;
+    -webkit-transition: color .5s ease;
+    -moz-transition: color .5s ease;
+    -ms-transition: color .5s ease;
+    -o-transition: color .5s ease;
+}
+.social-icons .fa-facebook-square:hover{
+    color:rgb(250, 199, 255);
+}
+.social-icons .fa-instagram-square:hover{
+    color:rgb(250, 199, 255);
+    }
+    .social-icons .fa-blogger:hover{
+        color:rgb(250, 199, 255);
+        }
+
+@media(min-width:768px){
+    .navbar-brand img{
+        height:60px;
+        width:160px;
+    }
+    .changeNavBgc .navbar-brand img{
+        height:50px;
+        width:160px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+     max-width: 1200px;
+    }
+}
+@media(min-width:1300px){
+    .container{
+      max-width: 1300px;
+    }
+}

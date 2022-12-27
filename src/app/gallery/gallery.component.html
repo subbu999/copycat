@@ -1,0 +1,77 @@
+<h1 class="main-heading">Art Works</h1>
+<h3 class="sub-heading">Pencil Sketches</h3>
+
+<div class="row px-3 overflow-hidden">
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="flip-left">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch1.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="flip-left">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch2.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="flip-left">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch3.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="flip-right">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch4.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="flip-right">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch5.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="flip-right">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch6.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+</div>
+
+<h3 class="sub-heading">Acrylic Paints</h3>
+<div class="row px-3 overflow-hidden">
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-right">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/paint1.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-down">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/paint2.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-left">
+        <div class="work-wrapper">
+            <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/paint3.jpg" alt=""
+                (click)="imgPreview.src=$event.target.currentSrc">
+        </div>
+    </div>
+</div>
+
+<!-- Model -->
+<div class="modal fade" id="imageModal">
+    <div class="modal-dialog">
+        <div class="modal-content p-0">
+            <div class="modal-body p-1">
+                <span class="close" data-dismiss="modal">&times;</span>
+
+                <img data-toggle="modal" data-target="#imageModal" src="../../assets/img/sketch2.jpg" alt=""
+                    #imgPreview>
+            </div>
+        </div>
+    </div>
+</div>
